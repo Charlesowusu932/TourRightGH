@@ -63,6 +63,11 @@ Empty values are hidden, so the live page never shows placeholder text:
 
 ## Tracking
 
+Google Tag Manager (`GTM-N3HLFRD8`, override with `NEXT_PUBLIC_GTM_ID`) loads on every page via
+`components/Analytics.tsx`. Each buy-button click pushes a `cta_click` event to the dataLayer with
+`cta_location`, `link_url` and `cta_text`. In GTM, add a Custom Event trigger `cta_click` and send
+it to GA4 (for example as a `begin_checkout` event).
+
 Every buy button has a `data-cta` attribute (`header`, `hero`, `pain`, `samples`, `compare`,
 `buy-box`, `final`, `mobile-bar`) so your analytics can report which placement sells.
 

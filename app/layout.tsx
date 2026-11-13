@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import "./v2.css";
+import { Analytics, AnalyticsNoScript } from "@/components/Analytics";
 
 const sans = DM_Sans({
   subsets: ["latin", "latin-ext"],
@@ -49,7 +50,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
-      <body>{children}</body>
+      <body>
+        <AnalyticsNoScript />
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
