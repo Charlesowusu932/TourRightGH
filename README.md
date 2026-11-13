@@ -29,10 +29,23 @@ Copy `.env.example` to `.env.local` and set:
 - `components/sections/*`: one file per page section
 - `public/images/`: cover, sample pages, and Elmina photo pulled out of the export
 
-## Placeholders still to fill in
+## Conversion content to fill in (`lib/content.ts`)
 
-Search for `[` in `components/sections/` to find them: payment methods, refund policy,
-sharing terms (FAQ), and contact email (footer).
+Empty values are hidden, so the live page never shows placeholder text:
+
+| Setting | Where it appears |
+| --- | --- |
+| `testimonials` | "What readers say" section (hidden until you add a real quote) |
+| `guarantee` | Under every buy button, in the buy box, and as an FAQ answer |
+| `paymentMethods` | Under the buy box button |
+| `sharingTerms` | "Can I share it with my family?" FAQ |
+
+The footer still has a `[CONTACT EMAIL]` placeholder in `components/sections/SiteFooter.tsx`.
+
+## Tracking
+
+Every buy button has a `data-cta` attribute (`header`, `hero`, `pain`, `samples`, `compare`,
+`buy-box`, `final`, `mobile-bar`) so your analytics can report which placement sells.
 
 ## Mobile (app feel)
 

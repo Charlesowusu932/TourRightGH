@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import "./v2.css";
 
 const sans = DM_Sans({
   subsets: ["latin", "latin-ext"],

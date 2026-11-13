@@ -39,6 +39,7 @@ export function SiteHeader() {
         </div>
         <a
           className="btn hdr-cta"
+          data-cta="header"
           href={checkout}
           style={{
             display: "inline-flex",

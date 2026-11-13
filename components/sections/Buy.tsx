@@ -1,5 +1,7 @@
 import { CheckIcon, ArrowRightIcon } from "./icons";
 import { checkoutUrl as checkout, price } from "@/lib/config";
+import { guarantee, paymentMethods } from "@/lib/content";
+import { TrustLine } from "../ui";
 
 export function Buy() {
   return (
@@ -124,6 +126,7 @@ export function Buy() {
           <a
             className="btn"
             href={checkout}
+            data-cta="buy-box"
             style={{
               display: "flex",
               alignItems: "center",
@@ -140,12 +143,15 @@ export function Buy() {
           >
             Get the guide now <ArrowRightIcon />
           </a>
-          <p style={{ margin: "18px 0 0", fontSize: "14px", color: "#555555" }}>
-            [PAYMENT METHODS: card, PayPal, mobile money]
-          </p>
-          <p style={{ margin: "6px 0 0", fontSize: "14px", color: "#555555" }}>
-            [YOUR REFUND POLICY]
-          </p>
+          <div style={{ marginTop: "18px", display: "flex", justifyContent: "center" }}>
+            <TrustLine />
+          </div>
+          {guarantee && <p className="buy-guarantee">{guarantee}</p>}
+          {paymentMethods && (
+            <p style={{ margin: "12px 0 0", fontSize: "14px", color: "#555555" }}>
+              {paymentMethods}
+            </p>
+          )}
         </div>
       </div>
     </section>

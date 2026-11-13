@@ -1,10 +1,13 @@
-import { ArrowRightIcon } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { guarantee, sharingTerms } from "@/lib/content";
 
 const faqs = [
   {
     q: "Is this a printed book?",
     a: "No. It is a PDF you download straight after paying. You can print it, but it is designed to read on a phone, with tappable links and map buttons.",
+  },
+  {
+    q: "How do I get it after paying?",
+    a: "Your download link appears as soon as payment goes through. Save the PDF to your phone and it stays with you for the whole trip, even without signal (map links need data to open).",
   },
   {
     q: "How current is it?",
@@ -19,9 +22,11 @@ const faqs = [
     a: "Yes. All 16 regions, 50 destinations from Cape Coast to Mole and the Upper East, plus eight itineraries that start in Accra, Kumasi or Tamale.",
   },
   {
-    q: "Can I share it with my family?",
-    a: "[YOUR SHARING TERMS, for example: one copy for your household]",
+    q: "Is it legal or immigration advice?",
+    a: "No. It is travel information gathered from official and dated sources, with each one numbered so you can check it yourself before you travel.",
   },
+  ...(guarantee ? [{ q: "What if it isn’t what I need?", a: guarantee }] : []),
+  ...(sharingTerms ? [{ q: "Can I share it with my family?", a: sharingTerms }] : []),
 ];
 
 export function Faq() {
@@ -75,27 +80,6 @@ export function Faq() {
             <p style={{ margin: "0", padding: "0 0 22px", fontSize: "16px" }}>{a}</p>
           </details>
         ))}
-      </div>
-      <div style={{ marginTop: "40px", textAlign: "center" }}>
-        <a
-          className="btn"
-          href={checkout}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "10px",
-            minHeight: "56px",
-            padding: "0 32px",
-            borderRadius: "999px",
-            background: "#006b3f",
-            color: "#ffffff",
-            fontWeight: "700",
-            fontSize: "18px",
-            textDecoration: "none",
-          }}
-        >
-          Get the guide · US${price} <ArrowRightIcon />
-        </a>
       </div>
     </section>
   );

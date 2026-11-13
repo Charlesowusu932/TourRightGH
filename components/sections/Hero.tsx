@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CheckIcon, ArrowRightIcon } from "./icons";
+import { TrustLine } from "../ui";
 import { checkoutUrl as checkout, price } from "@/lib/config";
 
 export function Hero() {
@@ -31,14 +32,14 @@ export function Hero() {
               fontWeight: "700",
               letterSpacing: ".2em",
               textTransform: "uppercase",
-              color: "#006b3f",
+              color: "#fcd116",
             }}
           >
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
               style={{ width: "16px", height: "16px", flex: "none" }}
-              fill="#111111"
+              fill="#fcd116"
             >
               <path d="M12 1.5l3.09 7.26 7.41.65-5.62 4.92 1.68 7.27L12 17.77l-6.56 3.83 1.68-7.27L1.5 9.41l7.41-.65z" />
             </svg>
@@ -55,7 +56,7 @@ export function Hero() {
             }}
           >
             Coming home to Ghana?{" "}
-            <span style={{ color: "rgb(206, 17, 38)" }}>
+            <span style={{ color: "#fcd116" }}>
               <i>Land ready.</i>
             </span>
           </h1>
@@ -85,6 +86,7 @@ export function Hero() {
               id="hero-cta"
               className="btn hero-cta"
               href={checkout}
+              data-cta="hero"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -101,9 +103,12 @@ export function Hero() {
             >
               Get the guide · US${price} <ArrowRightIcon />
             </a>
-            <span style={{ fontSize: "15px", color: "#ffffff" }}>
-              Instant PDF download · 62 pages
-            </span>
+            <a className="cta-ghost" href="#look-inside" data-cta="hero-look-inside">
+              Look inside first
+            </a>
+          </div>
+          <div style={{ marginTop: "16px" }}>
+            <TrustLine tone="dark" />
           </div>
           <div
             style={{
@@ -116,19 +121,19 @@ export function Hero() {
             }}
           >
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>Reads on phone, tablet or laptop</span>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>57 numbered sources</span>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>Tap-to-open map links</span>
