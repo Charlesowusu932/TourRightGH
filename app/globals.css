@@ -141,8 +141,8 @@ a {
   .hero-inner h1 {
     font-size: 40px !important;
   }
-  .hero-inner > div:first-child > p:nth-of-type(2) {
-    font-size: 17px !important;
+  .hero-lead {
+    font-size: 16px !important;
   }
   .hero-cta {
     width: 100%;

@@ -38,9 +38,10 @@ export function Hero() {
             </span>
           </h1>
           <p
+            className="hero-lead"
             style={{
               margin: "24px 0 0",
-              fontSize: "20px",
+              fontSize: "18px",
               lineHeight: "1.5",
               maxWidth: "560px",
               color: "#ffffff",
