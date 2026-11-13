@@ -1,6 +1,9 @@
 export function Contents() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px 40px" }}>
+    <section
+      className="gutter"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px 40px" }}
+    >
       <p
         style={{
           margin: "0 0 12px",

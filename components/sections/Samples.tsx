@@ -3,7 +3,10 @@ import Image from "next/image";
 export function Samples() {
   return (
     <section style={{ background: "#eef3ee", marginTop: "48px" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
+      <div
+        className="sec-inner"
+        style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}
+      >
         <p
           style={{
             margin: "0 0 12px",
@@ -28,7 +31,10 @@ export function Samples() {
         >
           Real pages from the guide
         </h2>
-        <div style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "28px" }}>
+        <div
+          className="swipe swipe-narrow"
+          style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "28px" }}
+        >
           <figure style={{ margin: "0", flex: "1 1 230px", minWidth: "0" }}>
             <Image
               src="/images/page-money.jpg"

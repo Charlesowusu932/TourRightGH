@@ -3,6 +3,7 @@ import Image from "next/image";
 export function Sources() {
   return (
     <section
+      className="sec"
       style={{
         maxWidth: "1200px",
         margin: "0 auto",

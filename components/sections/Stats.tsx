@@ -1,7 +1,11 @@
 export function Stats() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}>
+    <section
+      className="gutter"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}
+    >
       <div
+        className="stats"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -15,6 +19,7 @@ export function Stats() {
       >
         <div style={{ flex: "1 1 140px" }}>
           <div
+            className="stat-num"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "48px",
@@ -28,6 +33,7 @@ export function Stats() {
         </div>
         <div style={{ flex: "1 1 140px" }}>
           <div
+            className="stat-num"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "48px",
@@ -41,6 +47,7 @@ export function Stats() {
         </div>
         <div style={{ flex: "1 1 140px" }}>
           <div
+            className="stat-num"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "48px",
@@ -54,6 +61,7 @@ export function Stats() {
         </div>
         <div style={{ flex: "1 1 140px" }}>
           <div
+            className="stat-num"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "48px",
@@ -67,6 +75,7 @@ export function Stats() {
         </div>
         <div style={{ flex: "1 1 140px" }}>
           <div
+            className="stat-num"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "48px",

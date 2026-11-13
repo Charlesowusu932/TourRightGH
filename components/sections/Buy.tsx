@@ -8,6 +8,7 @@ export function Buy() {
       style={{ background: "#006b3f", color: "#fbf8f1", marginTop: "48px", position: "relative" }}
     >
       <div
+        className="sec-inner"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
@@ -73,6 +74,7 @@ export function Buy() {
           </ul>
         </div>
         <div
+          className="buy-card"
           style={{
             flex: "0 1 400px",
             minWidth: "0",

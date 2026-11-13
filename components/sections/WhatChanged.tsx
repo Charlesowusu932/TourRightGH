@@ -1,7 +1,13 @@
 export function WhatChanged() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}>
-      <div style={{ background: "#ffffff", borderRadius: "18px", padding: "40px" }}>
+    <section
+      className="gutter"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}
+    >
+      <div
+        className="card-pad"
+        style={{ background: "#ffffff", borderRadius: "18px", padding: "40px" }}
+      >
         <p
           style={{
             margin: "0 0 12px",

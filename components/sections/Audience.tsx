@@ -1,6 +1,9 @@
 export function Audience() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "88px 24px 40px" }}>
+    <section
+      className="sec"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "88px 24px 40px" }}
+    >
       <p
         style={{
           margin: "0 0 12px",
@@ -30,7 +33,10 @@ export function Audience() {
         The rules depend on the passport you carry. Every page is tagged so you can skip straight to
         what applies to you.
       </p>
-      <div style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "22px" }}>
+      <div
+        className="swipe"
+        style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "22px" }}
+      >
         <div
           style={{
             flex: "1 1 300px",

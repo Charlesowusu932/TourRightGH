@@ -19,6 +19,7 @@ Copy `.env.example` to `.env.local` and set:
 | --- | --- | --- |
 | `NEXT_PUBLIC_PRICE` | `15` | Price shown on every buy button (US$) |
 | `NEXT_PUBLIC_CHECKOUT_URL` | `#buy` | Where buy buttons link (Stripe Payment Link, Gumroad, etc.) |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Live site URL, used for social share previews |
 
 ## Layout
 
@@ -32,3 +33,16 @@ Copy `.env.example` to `.env.local` and set:
 
 Search for `[` in `components/sections/` to find them: payment methods, refund policy,
 sharing terms (FAQ), and contact email (footer).
+
+## Mobile (app feel)
+
+On screens 720px wide or narrower (rules at the bottom of `app/globals.css`):
+
+- Sticky, translucent title bar; the header buy button is hidden on phones
+- `components/MobileBuyBar.tsx`: a bottom buy bar that slides in once the hero button scrolls away and hides over the `#buy` section
+- Swipeable, snapping card rows (`.swipe`) for "Who it is for" and "Real pages"
+- Stats shown as a 2-column tile grid; tighter spacing throughout
+- Respects iPhone notch and home-indicator safe areas; press feedback on buttons; no sticky hover states on touch
+- Installable: `app/manifest.ts`, `app/icon.png`, `app/apple-icon.png`, `public/icons/`. "Add to Home Screen" opens it full-screen as "Ghana Guide"
+
+The FAQ is a tap-to-open accordion at every width.

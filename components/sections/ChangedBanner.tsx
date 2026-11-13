@@ -2,6 +2,7 @@ export function ChangedBanner() {
   return (
     <section style={{ background: "#fff6d6" }}>
       <div
+        className="gutter"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",

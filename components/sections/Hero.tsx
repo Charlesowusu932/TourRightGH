@@ -4,8 +4,12 @@ import { checkoutUrl as checkout, price } from "@/lib/config";
 
 export function Hero() {
   return (
-    <section style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#006b3f" }}>
+    <section
+      className="hero"
+      style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#006b3f" }}
+    >
       <div
+        className="hero-inner"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
@@ -78,7 +82,8 @@ export function Hero() {
             }}
           >
             <a
-              className="btn"
+              id="hero-cta"
+              className="btn hero-cta"
               href={checkout}
               style={{
                 display: "inline-flex",
@@ -131,6 +136,7 @@ export function Hero() {
           </div>
         </div>
         <div
+          className="hero-art"
           style={{
             flex: "1 1 380px",
             minWidth: "0",

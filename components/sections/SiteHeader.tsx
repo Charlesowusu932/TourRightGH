@@ -3,7 +3,10 @@ import { checkoutUrl as checkout, price } from "@/lib/config";
 
 export function SiteHeader() {
   return (
-    <header style={{ background: "#ffffff", color: "#006b3f", borderBottom: "1px solid #e4e0d4" }}>
+    <header
+      className="app-header"
+      style={{ background: "#ffffff", color: "#006b3f", borderBottom: "1px solid #e4e0d4" }}
+    >
       <div
         style={{
           maxWidth: "1200px",
@@ -24,6 +27,7 @@ export function SiteHeader() {
             <Logo />
           </span>
           <span
+            className="brand"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "21px",
@@ -34,7 +38,7 @@ export function SiteHeader() {
           </span>
         </div>
         <a
-          className="btn"
+          className="btn hdr-cta"
           href={checkout}
           style={{
             display: "inline-flex",

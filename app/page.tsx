@@ -10,6 +10,7 @@ import { WhatChanged } from "@/components/sections/WhatChanged";
 import { Buy } from "@/components/sections/Buy";
 import { Faq } from "@/components/sections/Faq";
 import { SiteFooter } from "@/components/sections/SiteFooter";
+import { MobileBuyBar } from "@/components/MobileBuyBar";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Faq />
       </main>
       <SiteFooter />
+      <MobileBuyBar />
     </div>
   );
 }
