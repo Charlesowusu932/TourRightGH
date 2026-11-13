@@ -121,6 +121,8 @@ a {
   .app-header > div {
     padding: 10px 20px !important;
     flex-wrap: nowrap !important;
+    /* header button is hidden on phones, so centre the logo like an app title */
+    justify-content: center !important;
   }
   .app-header .brand {
     font-size: 19px !important;
