@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fbf8f1;
+}
+
+a {
+  color: #006b3f;
+}
+a:hover {
+  color: #111111;
+}
+
+/* Ghana flag stripe used above the footer */
+.kente {
+  height: 12px;
+  background: linear-gradient(180deg, #ce1126 0 4px, #fcd116 4px 8px, #006b3f 8px 12px);
+}
+
+.ico {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* !important is needed because button colours are set inline */
+.btn:hover {
+  background: #ffe066 !important;
+}
+.btn2:hover {
+  background: #ffffff !important;
+}
+
+.shot {
+  box-shadow:
+    0 24px 48px -18px rgba(19, 32, 28, 0.45),
+    0 2px 6px rgba(19, 32, 28, 0.12);
+}
