@@ -1,6 +1,9 @@
 export function Audience() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "88px 24px 40px" }}>
+    <section
+      className="sec"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "88px 24px 40px" }}
+    >
       <p
         style={{
           margin: "0 0 12px",
@@ -20,7 +23,7 @@ export function Audience() {
           fontWeight: "400",
           fontSize: "clamp(32px, 3.6vw, 46px)",
           lineHeight: "1.1",
-          color: "#006b3f",
+          color: "#004d2e",
           maxWidth: "760px",
         }}
       >
@@ -30,7 +33,10 @@ export function Audience() {
         The rules depend on the passport you carry. Every page is tagged so you can skip straight to
         what applies to you.
       </p>
-      <div style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "22px" }}>
+      <div
+        className="swipe"
+        style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", gap: "22px" }}
+      >
         <div
           style={{
             flex: "1 1 300px",
@@ -46,7 +52,7 @@ export function Audience() {
                 width: "48px",
                 height: "48px",
                 borderRadius: "50%",
-                background: "#006b3f",
+                background: "#004d2e",
                 color: "#fbf8f1",
                 alignItems: "center",
                 justifyContent: "center",
@@ -82,7 +88,7 @@ export function Audience() {
               DUAL
             </span>
           </div>
-          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#006b3f" }}>
+          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#004d2e" }}>
             Raised abroad, Ghanaian at heart
           </h3>
           <p style={{ margin: "0", fontSize: "16px" }}>
@@ -105,7 +111,7 @@ export function Audience() {
                 width: "48px",
                 height: "48px",
                 borderRadius: "50%",
-                background: "#006b3f",
+                background: "#004d2e",
                 color: "#fbf8f1",
                 alignItems: "center",
                 justifyContent: "center",
@@ -134,13 +140,13 @@ export function Audience() {
                 fontSize: "12px",
                 fontWeight: "700",
                 letterSpacing: ".16em",
-                backgroundColor: "#006b3f",
+                backgroundColor: "#004d2e",
               }}
             >
               VISITOR
             </span>
           </div>
-          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#006b3f" }}>
+          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#004d2e" }}>
             Heritage and first-time visitors
           </h3>
           <p style={{ margin: "0", fontSize: "16px" }}>
@@ -163,7 +169,7 @@ export function Audience() {
                 width: "48px",
                 height: "48px",
                 borderRadius: "50%",
-                background: "#006b3f",
+                background: "#004d2e",
                 color: "#fbf8f1",
                 alignItems: "center",
                 justifyContent: "center",
@@ -189,7 +195,7 @@ export function Audience() {
               style={{
                 padding: "5px 12px",
                 borderRadius: "999px",
-                background: "#006b3f",
+                background: "#004d2e",
                 color: "#fbf8f1",
                 fontSize: "12px",
                 fontWeight: "700",
@@ -199,7 +205,7 @@ export function Audience() {
               GH
             </span>
           </div>
-          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#006b3f" }}>
+          <h3 style={{ margin: "22px 0 8px", fontSize: "21px", color: "#004d2e" }}>
             Back after years away
           </h3>
           <p style={{ margin: "0", fontSize: "16px" }}>

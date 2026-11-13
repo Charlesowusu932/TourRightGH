@@ -1,13 +1,17 @@
 import { CheckIcon, ArrowRightIcon } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
+import { guarantee, paymentMethods } from "@/lib/content";
+import { TrustLine } from "../ui";
 
-export function Buy() {
+export async function Buy() {
+  const { symbol, amount: price, checkoutUrl: checkout } = await getPricing();
   return (
     <section
       id="buy"
-      style={{ background: "#006b3f", color: "#fbf8f1", marginTop: "48px", position: "relative" }}
+      style={{ background: "#004d2e", color: "#fbf8f1", marginTop: "48px", position: "relative" }}
     >
       <div
+        className="sec-inner"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
@@ -73,6 +77,7 @@ export function Buy() {
           </ul>
         </div>
         <div
+          className="buy-card"
           style={{
             flex: "0 1 400px",
             minWidth: "0",
@@ -102,10 +107,10 @@ export function Buy() {
               justifyContent: "center",
               alignItems: "flex-start",
               gap: "4px",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
-            <span style={{ fontSize: "26px", fontWeight: "700", marginTop: "12px" }}>US$</span>
+            <span style={{ fontSize: "26px", fontWeight: "700", marginTop: "12px" }}>{symbol}</span>
             <span
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
@@ -122,6 +127,9 @@ export function Buy() {
           <a
             className="btn"
             href={checkout}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="buy-box"
             style={{
               display: "flex",
               alignItems: "center",
@@ -138,12 +146,15 @@ export function Buy() {
           >
             Get the guide now <ArrowRightIcon />
           </a>
-          <p style={{ margin: "18px 0 0", fontSize: "14px", color: "#555555" }}>
-            [PAYMENT METHODS: card, PayPal, mobile money]
-          </p>
-          <p style={{ margin: "6px 0 0", fontSize: "14px", color: "#555555" }}>
-            [YOUR REFUND POLICY]
-          </p>
+          <div style={{ marginTop: "18px", display: "flex", justifyContent: "center" }}>
+            <TrustLine />
+          </div>
+          {guarantee && <p className="buy-guarantee">{guarantee}</p>}
+          {paymentMethods && (
+            <p style={{ margin: "12px 0 0", fontSize: "14px", color: "#555555" }}>
+              {paymentMethods}
+            </p>
+          )}
         </div>
       </div>
     </section>

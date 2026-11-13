@@ -1,9 +1,13 @@
 import { Logo } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const { label: price, checkoutUrl: checkout } = await getPricing();
   return (
-    <header style={{ background: "#ffffff", color: "#006b3f", borderBottom: "1px solid #e4e0d4" }}>
+    <header
+      className="app-header"
+      style={{ background: "#ffffff", color: "#004d2e", borderBottom: "1px solid #e4e0d4" }}
+    >
       <div
         style={{
           maxWidth: "1200px",
@@ -18,24 +22,28 @@ export function SiteHeader() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <span
-            style={{ display: "flex", width: "34px", height: "30px", color: "#006b3f" }}
+            style={{ display: "flex", width: "34px", height: "30px", color: "#004d2e" }}
             aria-hidden="true"
           >
             <Logo />
           </span>
           <span
+            className="brand"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "21px",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             Ghana for the Diaspora
           </span>
         </div>
         <a
-          className="btn"
+          className="btn hdr-cta"
+          data-cta="header"
           href={checkout}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -49,7 +57,7 @@ export function SiteHeader() {
             textDecoration: "none",
           }}
         >
-          Get the guide · US${price}
+          Get the guide · {price}
         </a>
       </div>
     </header>

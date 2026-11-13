@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { CheckIcon, ArrowRightIcon } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { TrustLine } from "../ui";
+import { getPricing } from "@/lib/pricing";
 
-export function Hero() {
+export async function Hero() {
+  const { label: price, checkoutUrl: checkout } = await getPricing();
   return (
-    <section style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#006b3f" }}>
+    <section
+      className="hero"
+      style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#004d2e" }}
+    >
       <div
+        className="hero-inner"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
@@ -17,29 +23,6 @@ export function Hero() {
         }}
       >
         <div style={{ flex: "1 1 480px", minWidth: "0" }}>
-          <p
-            style={{
-              margin: "0 0 18px",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              fontSize: "13px",
-              fontWeight: "700",
-              letterSpacing: ".2em",
-              textTransform: "uppercase",
-              color: "#006b3f",
-            }}
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              style={{ width: "16px", height: "16px", flex: "none" }}
-              fill="#111111"
-            >
-              <path d="M12 1.5l3.09 7.26 7.41.65-5.62 4.92 1.68 7.27L12 17.77l-6.56 3.83 1.68-7.27L1.5 9.41l7.41-.65z" />
-            </svg>
-            Updated 12 November 2026 · Edition 2026/2027
-          </p>
           <h1
             style={{
               margin: "0",
@@ -51,14 +34,15 @@ export function Hero() {
             }}
           >
             Coming home to Ghana?{" "}
-            <span style={{ color: "rgb(206, 17, 38)" }}>
+            <span style={{ color: "#fcd116" }}>
               <i>Land ready.</i>
             </span>
           </h1>
           <p
+            className="hero-lead"
             style={{
               margin: "24px 0 0",
-              fontSize: "20px",
+              fontSize: "18px",
               lineHeight: "1.5",
               maxWidth: "560px",
               color: "#ffffff",
@@ -78,8 +62,12 @@ export function Hero() {
             }}
           >
             <a
-              className="btn"
+              id="hero-cta"
+              className="btn hero-cta"
               href={checkout}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="hero"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -94,11 +82,14 @@ export function Hero() {
                 textDecoration: "none",
               }}
             >
-              Get the guide · US${price} <ArrowRightIcon />
+              Get the guide · {price} <ArrowRightIcon />
             </a>
-            <span style={{ fontSize: "15px", color: "#ffffff" }}>
-              Instant PDF download · 62 pages
-            </span>
+            <a className="cta-ghost" href="#look-inside" data-cta="hero-look-inside">
+              Look inside first
+            </a>
+          </div>
+          <div style={{ marginTop: "16px" }}>
+            <TrustLine tone="dark" />
           </div>
           <div
             style={{
@@ -111,19 +102,19 @@ export function Hero() {
             }}
           >
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>Reads on phone, tablet or laptop</span>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>57 numbered sources</span>
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ display: "flex", color: "#006b3f" }}>
+              <span style={{ display: "flex", color: "#fcd116" }}>
                 <CheckIcon />
               </span>{" "}
               <span style={{ color: "#ffffff" }}>Tap-to-open map links</span>
@@ -131,6 +122,7 @@ export function Hero() {
           </div>
         </div>
         <div
+          className="hero-art"
           style={{
             flex: "1 1 380px",
             minWidth: "0",

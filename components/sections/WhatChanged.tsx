@@ -1,7 +1,13 @@
 export function WhatChanged() {
   return (
-    <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}>
-      <div style={{ background: "#ffffff", borderRadius: "18px", padding: "40px" }}>
+    <section
+      className="gutter"
+      style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px" }}
+    >
+      <div
+        className="card-pad"
+        style={{ background: "#ffffff", borderRadius: "18px", padding: "40px" }}
+      >
         <p
           style={{
             margin: "0 0 12px",
@@ -9,7 +15,7 @@ export function WhatChanged() {
             fontWeight: "700",
             letterSpacing: ".2em",
             textTransform: "uppercase",
-            color: "#006b3f",
+            color: "#004d2e",
           }}
         >
           What changed in 2026
@@ -21,14 +27,14 @@ export function WhatChanged() {
             fontWeight: "400",
             fontSize: "clamp(28px, 3vw, 38px)",
             lineHeight: "1.15",
-            color: "#006b3f",
+            color: "#004d2e",
           }}
         >
           If you last visited before this year, read this first
         </h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "22px 40px" }}>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
@@ -50,7 +56,7 @@ export function WhatChanged() {
             </p>
           </div>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
@@ -72,7 +78,7 @@ export function WhatChanged() {
             </p>
           </div>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
@@ -93,7 +99,7 @@ export function WhatChanged() {
             </p>
           </div>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
@@ -116,7 +122,7 @@ export function WhatChanged() {
             </p>
           </div>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
@@ -138,7 +144,7 @@ export function WhatChanged() {
             </p>
           </div>
           <div style={{ flex: "1 1 440px", display: "flex", gap: "14px" }}>
-            <span style={{ flex: "none", color: "#006b3f" }}>
+            <span style={{ flex: "none", color: "#004d2e" }}>
               <svg
                 className="ico"
                 aria-hidden="true"
