@@ -5,7 +5,7 @@ export function SiteHeader() {
   return (
     <header
       className="app-header"
-      style={{ background: "#ffffff", color: "#006b3f", borderBottom: "1px solid #e4e0d4" }}
+      style={{ background: "#ffffff", color: "#004d2e", borderBottom: "1px solid #e4e0d4" }}
     >
       <div
         style={{
@@ -21,7 +21,7 @@ export function SiteHeader() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <span
-            style={{ display: "flex", width: "34px", height: "30px", color: "#006b3f" }}
+            style={{ display: "flex", width: "34px", height: "30px", color: "#004d2e" }}
             aria-hidden="true"
           >
             <Logo />
@@ -31,7 +31,7 @@ export function SiteHeader() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "21px",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             Ghana for the Diaspora

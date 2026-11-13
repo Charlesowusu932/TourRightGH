@@ -11,7 +11,7 @@ export function Stats() {
           flexWrap: "wrap",
           gap: "14px",
           justifyContent: "space-between",
-          background: "#006b3f",
+          background: "#004d2e",
           borderRadius: "18px",
           padding: "30px 34px",
           color: "#fbf8f1",

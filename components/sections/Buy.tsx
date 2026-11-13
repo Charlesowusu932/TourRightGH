@@ -7,7 +7,7 @@ export function Buy() {
   return (
     <section
       id="buy"
-      style={{ background: "#006b3f", color: "#fbf8f1", marginTop: "48px", position: "relative" }}
+      style={{ background: "#004d2e", color: "#fbf8f1", marginTop: "48px", position: "relative" }}
     >
       <div
         className="sec-inner"
@@ -106,7 +106,7 @@ export function Buy() {
               justifyContent: "center",
               alignItems: "flex-start",
               gap: "4px",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             <span style={{ fontSize: "26px", fontWeight: "700", marginTop: "12px" }}>US$</span>

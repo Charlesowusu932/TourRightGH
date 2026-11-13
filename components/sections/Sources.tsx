@@ -34,7 +34,7 @@ export function Sources() {
             fontWeight: "400",
             fontSize: "clamp(32px, 3.6vw, 46px)",
             lineHeight: "1.1",
-            color: "#006b3f",
+            color: "#004d2e",
           }}
         >
           Checked, dated and sourced. Not guessed.
@@ -53,7 +53,7 @@ export function Sources() {
                 textAlign: "center",
                 padding: "4px 0",
                 borderRadius: "999px",
-                background: "#006b3f",
+                background: "#004d2e",
                 color: "#fbf8f1",
                 fontSize: "12px",
                 fontWeight: "700",

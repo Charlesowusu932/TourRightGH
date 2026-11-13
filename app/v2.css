@@ -25,7 +25,7 @@
   color: #b00e20;
 }
 .eyebrow-green {
-  color: #006b3f;
+  color: #004d2e;
 }
 .eyebrow-yellow {
   color: #fcd116;
@@ -38,7 +38,7 @@
   font-weight: 400;
   font-size: clamp(32px, 3.6vw, 46px);
   line-height: 1.1;
-  color: #006b3f;
+  color: #004d2e;
 }
 .lead {
   margin: 16px 0 0;
@@ -73,7 +73,7 @@
   color: #111111;
 }
 .cta-green {
-  background: #006b3f;
+  background: #004d2e;
   color: #ffffff;
 }
 .cta-block {
@@ -98,9 +98,9 @@
     color: #111111;
   }
   .cta-green:hover {
-    background: #00573a;
+    background: #003820;
     color: #ffffff;
-    box-shadow: 0 10px 24px -12px rgba(0, 107, 63, 0.7);
+    box-shadow: 0 10px 24px -12px rgba(0, 77, 46, 0.7);
   }
   .cta-ghost:hover {
     color: #111111;
@@ -145,7 +145,7 @@
   color: #555555;
 }
 .trust-light .trust-ico {
-  color: #006b3f;
+  color: #004d2e;
 }
 .trust-dark {
   color: rgba(255, 255, 255, 0.88);
@@ -187,7 +187,7 @@
   margin-right: 8px;
   padding: 2px 9px;
   border-radius: 999px;
-  background: #006b3f;
+  background: #004d2e;
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
@@ -227,7 +227,7 @@
   border-radius: 4px;
 }
 .gallery-btn:focus-visible {
-  outline: 3px solid #006b3f;
+  outline: 3px solid #004d2e;
   outline-offset: 4px;
 }
 .gallery-img {
@@ -375,7 +375,7 @@
   align-items: center;
 }
 .compare-head .compare-us {
-  background: #006b3f;
+  background: #004d2e;
   color: #ffffff;
 }
 .mark {
@@ -391,7 +391,7 @@
   height: 16px;
 }
 .mark-yes {
-  background: #006b3f;
+  background: #004d2e;
   color: #ffffff;
 }
 .mark-some {
@@ -433,7 +433,7 @@
   color: #555555;
 }
 .quote figcaption strong {
-  color: #006b3f;
+  color: #004d2e;
   font-size: 15px;
 }
 
@@ -443,7 +443,7 @@
   padding: 10px 12px;
   border-radius: 10px;
   background: #eef7f1;
-  color: #006b3f;
+  color: #004d2e;
   font-size: 14px;
   font-weight: 600;
 }
@@ -451,7 +451,7 @@
 /* ---------- Final call to action ---------- */
 .final {
   position: relative;
-  background: #006b3f;
+  background: #004d2e;
   color: #ffffff;
   text-align: center;
 }
@@ -460,7 +460,7 @@
   position: absolute;
   inset: 0 0 auto;
   height: 12px;
-  background: linear-gradient(180deg, #ce1126 0 4px, #fcd116 4px 8px, #006b3f 8px 12px);
+  background: linear-gradient(180deg, #ce1126 0 4px, #fcd116 4px 8px, #004d2e 8px 12px);
 }
 .final-inner {
   padding-top: 88px;

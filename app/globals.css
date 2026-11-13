@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  color: #006b3f;
+  color: #004d2e;
 }
 
 /* Hover only on devices that really hover, so taps don't leave "stuck" states */
@@ -43,7 +43,7 @@ a {
 /* Ghana flag stripe used above the footer */
 .kente {
   height: 12px;
-  background: linear-gradient(180deg, #ce1126 0 4px, #fcd116 4px 8px, #006b3f 8px 12px);
+  background: linear-gradient(180deg, #ce1126 0 4px, #fcd116 4px 8px, #004d2e 8px 12px);
 }
 
 .ico {
@@ -79,14 +79,14 @@ a {
   width: 22px;
   height: 22px;
   flex: none;
-  color: #006b3f;
+  color: #004d2e;
   transition: transform 0.2s ease;
 }
 .faq[open] .faq-chevron {
   transform: rotate(180deg);
 }
 .faq summary:focus-visible {
-  outline: 2px solid #006b3f;
+  outline: 2px solid #004d2e;
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -254,7 +254,7 @@ a {
     font-family: var(--font-serif), Georgia, serif;
     font-weight: 400;
     font-size: 24px;
-    color: #006b3f;
+    color: #004d2e;
   }
   .buy-bar-text span {
     font-size: 13px;

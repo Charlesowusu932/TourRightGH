@@ -18,7 +18,7 @@ Copy `.env.example` to `.env.local` and set:
 | Variable | Default | What it does |
 | --- | --- | --- |
 | `NEXT_PUBLIC_PRICE` | `15` | Price shown on every buy button (US$) |
-| `NEXT_PUBLIC_CHECKOUT_URL` | `#buy` | Where buy buttons link (Stripe Payment Link, Gumroad, etc.) |
+| `NEXT_PUBLIC_CHECKOUT_URL` | `https://selar.com/k85pf8cz59` | Where every buy button links (Selar checkout) |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Live site URL, used for social share previews |
 
 ## Layout

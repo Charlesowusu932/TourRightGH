@@ -42,7 +42,7 @@ export function Faq() {
           fontWeight: "700",
           letterSpacing: ".2em",
           textTransform: "uppercase",
-          color: "#006b3f",
+          color: "#004d2e",
         }}
       >
         Questions
@@ -54,7 +54,7 @@ export function Faq() {
           fontWeight: "400",
           fontSize: "clamp(32px, 3.6vw, 46px)",
           lineHeight: "1.1",
-          color: "#006b3f",
+          color: "#004d2e",
         }}
       >
         Before you buy
@@ -63,7 +63,7 @@ export function Faq() {
         {faqs.map(({ q, a }, i) => (
           <details key={q} className="faq" open={i === 0}>
             <summary>
-              <h3 style={{ margin: 0, fontSize: "19px", color: "#006b3f" }}>{q}</h3>
+              <h3 style={{ margin: 0, fontSize: "19px", color: "#004d2e" }}>{q}</h3>
               <svg
                 className="faq-chevron"
                 aria-hidden="true"

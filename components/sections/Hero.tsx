@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       className="hero"
-      style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#006b3f" }}
+      style={{ color: "#1f1f1f", overflow: "hidden", backgroundColor: "#004d2e" }}
     >
       <div
         className="hero-inner"
@@ -22,29 +22,6 @@ export function Hero() {
         }}
       >
         <div style={{ flex: "1 1 480px", minWidth: "0" }}>
-          <p
-            style={{
-              margin: "0 0 18px",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              fontSize: "13px",
-              fontWeight: "700",
-              letterSpacing: ".2em",
-              textTransform: "uppercase",
-              color: "#fcd116",
-            }}
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              style={{ width: "16px", height: "16px", flex: "none" }}
-              fill="#fcd116"
-            >
-              <path d="M12 1.5l3.09 7.26 7.41.65-5.62 4.92 1.68 7.27L12 17.77l-6.56 3.83 1.68-7.27L1.5 9.41l7.41-.65z" />
-            </svg>
-            Updated 12 November 2026 · Edition 2026/2027
-          </p>
           <h1
             style={{
               margin: "0",

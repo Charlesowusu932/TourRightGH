@@ -4,4 +4,4 @@
  * (see .env.example) instead of editing components.
  */
 export const price = process.env.NEXT_PUBLIC_PRICE ?? "15";
-export const checkoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL ?? "#buy";
+export const checkoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL ?? "https://selar.com/k85pf8cz59";

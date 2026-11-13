@@ -11,7 +11,7 @@ export function Contents() {
           fontWeight: "700",
           letterSpacing: ".2em",
           textTransform: "uppercase",
-          color: "#006b3f",
+          color: "#004d2e",
         }}
       >
         What is inside
@@ -23,7 +23,7 @@ export function Contents() {
           fontWeight: "400",
           fontSize: "clamp(32px, 3.6vw, 46px)",
           lineHeight: "1.1",
-          color: "#006b3f",
+          color: "#004d2e",
         }}
       >
         15 chapters, from the airport to the north
@@ -36,7 +36,7 @@ export function Contents() {
               fontSize: "13px",
               fontWeight: "700",
               letterSpacing: ".18em",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             PART ONE · PREPARING
@@ -82,7 +82,7 @@ export function Contents() {
               fontSize: "13px",
               fontWeight: "700",
               letterSpacing: ".18em",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             PART TWO · EXPERIENCING
@@ -123,7 +123,7 @@ export function Contents() {
               fontSize: "13px",
               fontWeight: "700",
               letterSpacing: ".18em",
-              color: "#006b3f",
+              color: "#004d2e",
             }}
           >
             PART THREE · EXPLORING
