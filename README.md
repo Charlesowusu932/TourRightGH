@@ -60,7 +60,6 @@ Empty values are hidden, so the live page never shows placeholder text:
 | `paymentMethods` | Under the buy box button |
 | `sharingTerms` | "Can I share it with my family?" FAQ |
 
-The footer still has a `[CONTACT EMAIL]` placeholder in `components/sections/SiteFooter.tsx`.
 
 ## Tracking
 

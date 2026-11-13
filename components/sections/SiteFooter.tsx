@@ -26,7 +26,7 @@ export function SiteFooter() {
           <span>Ghana for the Diaspora · Edition 2026/2027</span>
         </div>
         <div>
-          [CONTACT EMAIL] · Travel information, not legal or immigration advice. Check official
+          Tour Right GH · Travel information, not legal or immigration advice. Check official
           sources before you travel.
         </div>
       </div>
