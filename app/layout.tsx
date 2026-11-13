@@ -3,6 +3,7 @@ import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import "./v2.css";
 import { Analytics, AnalyticsNoScript } from "@/components/Analytics";
+import { getPricing } from "@/lib/pricing";
 
 const sans = DM_Sans({
   subsets: ["latin", "latin-ext"],
@@ -47,13 +48,14 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const pricing = await getPricing();
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body>
         <AnalyticsNoScript />
         {children}
-        <Analytics />
+        <Analytics value={Number(pricing.amount)} currency={pricing.currency} />
       </body>
     </html>
   );

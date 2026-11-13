@@ -68,6 +68,10 @@ Google Tag Manager (`GTM-N3HLFRD8`, override with `NEXT_PUBLIC_GTM_ID`) loads on
 `cta_location`, `link_url` and `cta_text`. In GTM, add a Custom Event trigger `cta_click` and send
 it to GA4 (for example as a `begin_checkout` event).
 
+Meta Pixel (`1437236261447838`, override with `NEXT_PUBLIC_META_PIXEL_ID`) tracks `PageView` on
+load and `InitiateCheckout` (with the visitor's price and currency) on every buy-button click.
+Purchases happen on Selar, so add the same pixel in Selar's settings to record `Purchase`.
+
 Every buy button has a `data-cta` attribute (`header`, `hero`, `pain`, `samples`, `compare`,
 `buy-box`, `final`, `mobile-bar`) so your analytics can report which placement sells.
 
