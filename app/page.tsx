@@ -15,13 +15,15 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { MobileBuyBar } from "@/components/MobileBuyBar";
+import { getPricing } from "@/lib/pricing";
 
 /*
  * Section order follows the buyer's questions:
  * what is it → is this my problem → is it for me → show me → what's in it →
  * why not free → can I trust it → what changed → buy → last doubts → buy.
  */
-export default function Home() {
+export default async function Home() {
+  const pricing = await getPricing();
   return (
     <div
       style={{
@@ -50,7 +52,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <SiteFooter />
-      <MobileBuyBar />
+      <MobileBuyBar price={pricing.label} checkoutUrl={pricing.checkoutUrl} />
     </div>
   );
 }

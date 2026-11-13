@@ -1,9 +1,10 @@
 import { CheckIcon, ArrowRightIcon } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 import { guarantee, paymentMethods } from "@/lib/content";
 import { TrustLine } from "../ui";
 
-export function Buy() {
+export async function Buy() {
+  const { symbol, amount: price, checkoutUrl: checkout } = await getPricing();
   return (
     <section
       id="buy"
@@ -109,7 +110,7 @@ export function Buy() {
               color: "#004d2e",
             }}
           >
-            <span style={{ fontSize: "26px", fontWeight: "700", marginTop: "12px" }}>US$</span>
+            <span style={{ fontSize: "26px", fontWeight: "700", marginTop: "12px" }}>{symbol}</span>
             <span
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
@@ -126,6 +127,8 @@ export function Buy() {
           <a
             className="btn"
             href={checkout}
+            target="_blank"
+            rel="noopener noreferrer"
             data-cta="buy-box"
             style={{
               display: "flex",

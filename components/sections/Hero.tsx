@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { CheckIcon, ArrowRightIcon } from "./icons";
 import { TrustLine } from "../ui";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 
-export function Hero() {
+export async function Hero() {
+  const { label: price, checkoutUrl: checkout } = await getPricing();
   return (
     <section
       className="hero"
@@ -64,6 +65,8 @@ export function Hero() {
               id="hero-cta"
               className="btn hero-cta"
               href={checkout}
+              target="_blank"
+              rel="noopener noreferrer"
               data-cta="hero"
               style={{
                 display: "inline-flex",
@@ -79,7 +82,7 @@ export function Hero() {
                 textDecoration: "none",
               }}
             >
-              Get the guide · US${price} <ArrowRightIcon />
+              Get the guide · {price} <ArrowRightIcon />
             </a>
             <a className="cta-ghost" href="#look-inside" data-cta="hero-look-inside">
               Look inside first

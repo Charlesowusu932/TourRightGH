@@ -1,4 +1,4 @@
-import { checkoutUrl, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 import { guarantee } from "@/lib/content";
 import { ArrowRightIcon } from "./sections/icons";
 
@@ -13,9 +13,9 @@ export function Eyebrow({
 }
 
 /** Primary buy button. `id` feeds `data-cta` so each placement can be tracked separately. */
-export function BuyButton({
+export async function BuyButton({
   id,
-  label = `Get the guide · US$${price}`,
+  label,
   variant = "yellow",
   block = false,
 }: {
@@ -24,13 +24,16 @@ export function BuyButton({
   variant?: "yellow" | "green";
   block?: boolean;
 }) {
+  const { label: price, checkoutUrl } = await getPricing();
   return (
     <a
       className={`cta cta-${variant}${block ? " cta-block" : ""}`}
       href={checkoutUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       data-cta={id}
     >
-      {label} <ArrowRightIcon />
+      {label ?? `Get the guide · ${price}`} <ArrowRightIcon />
     </a>
   );
 }

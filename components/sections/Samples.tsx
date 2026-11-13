@@ -1,6 +1,6 @@
 import { SampleGallery, type Sample } from "../SampleGallery";
 import { BuyButton, Eyebrow } from "../ui";
-import { price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 
 const samples: Sample[] = [
   {
@@ -29,7 +29,8 @@ const samples: Sample[] = [
   },
 ];
 
-export function Samples() {
+export async function Samples() {
+  const { label: price } = await getPricing();
   return (
     <section id="look-inside" className="samples">
       <div className="wrap v2-sec-pad">
@@ -39,7 +40,7 @@ export function Samples() {
         <SampleGallery samples={samples} />
         <div className="sec-cta">
           <BuyButton id="samples" label="Get all 62 pages" variant="green" />
-          <span className="sec-cta-note">Instant PDF download · US${price} once</span>
+          <span className="sec-cta-note">Instant PDF download · {price} once</span>
         </div>
       </div>
     </section>

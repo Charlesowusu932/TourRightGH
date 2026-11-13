@@ -1,7 +1,8 @@
 import { Logo } from "./icons";
-import { checkoutUrl as checkout, price } from "@/lib/config";
+import { getPricing } from "@/lib/pricing";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const { label: price, checkoutUrl: checkout } = await getPricing();
   return (
     <header
       className="app-header"
@@ -41,6 +42,8 @@ export function SiteHeader() {
           className="btn hdr-cta"
           data-cta="header"
           href={checkout}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -54,7 +57,7 @@ export function SiteHeader() {
             textDecoration: "none",
           }}
         >
-          Get the guide · US${price}
+          Get the guide · {price}
         </a>
       </div>
     </header>

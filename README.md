@@ -17,9 +17,29 @@ Copy `.env.example` to `.env.local` and set:
 
 | Variable | Default | What it does |
 | --- | --- | --- |
-| `NEXT_PUBLIC_PRICE` | `15` | Price shown on every buy button (US$) |
 | `NEXT_PUBLIC_CHECKOUT_URL` | `https://selar.com/k85pf8cz59` | Where every buy button links (Selar checkout) |
+| `CHECKOUT_URL_GB` | (unset) | Optional separate checkout link for UK visitors |
+| `PRICING_COUNTRY` | (unset) | Force a country (`GB`, `US`) when testing locally |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Live site URL, used for social share previews |
+
+## Pricing by country
+
+`lib/pricing.ts` picks the price from the visitor's country, read from the host's
+geolocation header (`x-vercel-ip-country` on Vercel, `cf-ipcountry` on Cloudflare):
+
+| Country | Price |
+| --- | --- |
+| United States | US$15 |
+| United Kingdom | £11.99 |
+| Everyone else | US$15 |
+
+The shown price must match what Selar charges in that currency. Set the GBP price on the
+Selar product, or create a UK-only product and put its link in `CHECKOUT_URL_GB`.
+Because the price depends on the visitor, the page renders per request (not as a static file),
+so don't put a shared HTML cache in front of it.
+
+Test locally with `PRICING_COUNTRY=GB npm run dev`, or send the header yourself:
+`curl -H "x-vercel-ip-country: GB" http://localhost:3000`.
 
 ## Layout
 
