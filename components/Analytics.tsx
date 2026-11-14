@@ -4,7 +4,6 @@ import Script from "next/script";
 import { useEffect } from "react";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-N3HLFRD8";
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1437236261447838";
 
 type TrackingWindow = Window & {
   dataLayer?: Record<string, unknown>[];
@@ -12,7 +11,8 @@ type TrackingWindow = Window & {
 };
 
 /**
- * Google Tag Manager and Meta Pixel.
+ * Google Tag Manager, plus buy-click events for GTM and the Meta Pixel
+ * (the pixel base code itself sits in <head>, see components/MetaPixel.tsx).
  *
  * Every buy-button click sends:
  * - GTM: a `cta_click` dataLayer event (cta_location, link_url, cta_text, value, currency)
@@ -61,22 +61,6 @@ export function Analytics({ value, currency }: { value: number; currency: string
           `}
         </Script>
       )}
-      {META_PIXEL_ID && (
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${META_PIXEL_ID}');
-            fbq('track', 'PageView');
-          `}
-        </Script>
-      )}
     </>
   );
 }
@@ -91,16 +75,6 @@ export function AnalyticsNoScript() {
           height="0"
           width="0"
           style={{ display: "none", visibility: "hidden" }}
-        />
-      )}
-      {META_PIXEL_ID && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          height="1"
-          width="1"
-          style={{ display: "none" }}
-          alt=""
-          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
         />
       )}
     </noscript>
