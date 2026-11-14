@@ -3,6 +3,7 @@ import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import "./v2.css";
 import { Analytics, AnalyticsNoScript } from "@/components/Analytics";
+import { MetaPixel } from "@/components/MetaPixel";
 import { getPricing } from "@/lib/pricing";
 
 const sans = DM_Sans({
@@ -52,6 +53,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const pricing = await getPricing();
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+      <head>
+        <MetaPixel />
+      </head>
       <body>
         <AnalyticsNoScript />
         {children}

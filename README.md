@@ -25,7 +25,7 @@ Copy `.env.example` to `.env.local` and set:
 ## Pricing by country
 
 `lib/pricing.ts` picks the price from the visitor's country, read from the host's
-geolocation header (`x-vercel-ip-country` on Vercel, `cf-ipcountry` on Cloudflare):
+geolocation header (`x-nf-geo` on Netlify, `x-vercel-ip-country` on Vercel, `cf-ipcountry` on Cloudflare):
 
 | Country | Price |
 | --- | --- |
@@ -68,7 +68,7 @@ Google Tag Manager (`GTM-N3HLFRD8`, override with `NEXT_PUBLIC_GTM_ID`) loads on
 `cta_location`, `link_url` and `cta_text`. In GTM, add a Custom Event trigger `cta_click` and send
 it to GA4 (for example as a `begin_checkout` event).
 
-Meta Pixel (`1437236261447838`, override with `NEXT_PUBLIC_META_PIXEL_ID`) tracks `PageView` on
+Meta Pixel (`1437236261447838`, override with `NEXT_PUBLIC_META_PIXEL_ID`) base code sits in `<head>` (`components/MetaPixel.tsx`), tracking `PageView` on
 load and `InitiateCheckout` (with the visitor's price and currency) on every buy-button click.
 Purchases happen on Selar, so add the same pixel in Selar's settings to record `Purchase`.
 
