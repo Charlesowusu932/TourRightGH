@@ -25,7 +25,7 @@ Copy `.env.example` to `.env.local` and set:
 ## Pricing by country
 
 `lib/pricing.ts` picks the price from the visitor's country, read from the host's
-geolocation header (`x-vercel-ip-country` on Vercel, `cf-ipcountry` on Cloudflare):
+geolocation header (`x-nf-geo` on Netlify, `x-vercel-ip-country` on Vercel, `cf-ipcountry` on Cloudflare):
 
 | Country | Price |
 | --- | --- |

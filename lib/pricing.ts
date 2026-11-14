@@ -31,12 +31,30 @@ const DEFAULT_REGION = "US";
  * Country headers added by common hosts, most trusted first.
  * Vercel and Cloudflare set these themselves at the edge.
  */
-const COUNTRY_HEADERS = ["x-vercel-ip-country", "cf-ipcountry", "cloudfront-viewer-country"];
+const COUNTRY_HEADERS = [
+  "x-vercel-ip-country",
+  "cf-ipcountry",
+  "cloudfront-viewer-country",
+  "x-country",
+];
+
+/** Netlify sends geolocation as base64-encoded JSON: {"country":{"code":"GB",...},...} */
+function netlifyCountry(h: Headers): string {
+  const raw = h.get("x-nf-geo");
+  if (!raw) return "";
+  try {
+    const geo = JSON.parse(Buffer.from(raw, "base64").toString("utf8"));
+    return typeof geo?.country?.code === "string" ? geo.country.code : "";
+  } catch {
+    return "";
+  }
+}
 
 /** Resolves the visitor's price once per request (shared by every component that asks). */
 export const getPricing = cache(async (): Promise<Pricing> => {
   const h = await headers();
   let country = process.env.PRICING_COUNTRY?.toUpperCase() ?? ""; // force a country when testing locally
+  if (!country) country = netlifyCountry(h).toUpperCase();
   if (!country) {
     for (const name of COUNTRY_HEADERS) {
       const value = h.get(name);
